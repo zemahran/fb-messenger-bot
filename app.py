@@ -71,6 +71,9 @@ def send_message(recipient_id):
         "payload": {
           "template_type": "generic",
           "elements": [{
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
+            "image_url": 'https://moneyfellows.com/img/web_logo_large.png',
             "buttons": [
               {
                 "type": "postback",
