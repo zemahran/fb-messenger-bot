@@ -79,46 +79,6 @@ def send_message(recipient_id):
                 "type": "postback",
                 "title": "What is Moneyfellows?",
                 "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "How do I pay?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Are there any fees?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "How do I get the money?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Is this legal?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "What is the credit ladder?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Why is Moneyfellows better than the traditional 'Gamaeya'?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Where are you located?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "How can I contact you for more info?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               }
             ]
           }]
@@ -133,7 +93,7 @@ def send_message(recipient_id):
         "message": response
     })
 
-    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+    r = requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=EAADHka8kP6EBAGqb4zjU72AsbxmUZCL7WQR6BxoUlc0ZBYR7LbqLMA28iPUDkVJZBCRefvq5AzBaMZBuDXFK2dQD6X5lPhjmMbyTlnjCd7QY7UHZCy0KKuPciFGktPzo3eZCC5UaIhqz5SFhZCqDBDTIGyeZANTkb6WnIlBgvlYNs5D0bVddwOTh", params=params, headers=headers, data=data)
     # if r.status_code != 200:
     #     log(r.status_code)
     #     log(r.text)
