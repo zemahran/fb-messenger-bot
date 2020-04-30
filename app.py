@@ -79,6 +79,11 @@ def send_message(recipient_id):
                 "type": "postback",
                 "title": "What is Moneyfellows?",
                 "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              },
+              {
+                "type": "postback",
+                "title": "How do I pay?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               }
             ]
           }]
