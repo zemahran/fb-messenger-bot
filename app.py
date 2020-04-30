@@ -65,7 +65,7 @@ def send_message(recipient_id):
         "Content-Type": "application/json"
     }
     response = {
-        "text": "You sent the message: "${received_message.text}". Now send me an image!"
+        "text": "You sent a message. Now send me an image!"
     }
 
     data = json.dumps({
