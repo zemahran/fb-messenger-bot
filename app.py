@@ -104,7 +104,7 @@ def send_message(recipient_id):
         "message": response
     })
 
-    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+    r = requests.post("https://graph.facebook.com/v6.0/me/messages?access_token=EAADHka8kP6EBAGqb4zjU72AsbxmUZCL7WQR6BxoUlc0ZBYR7LbqLMA28iPUDkVJZBCRefvq5AzBaMZBuDXFK2dQD6X5lPhjmMbyTlnjCd7QY7UHZCy0KKuPciFGktPzo3eZCC5UaIhqz5SFhZCqDBDTIGyeZANTkb6WnIlBgvlYNs5D0bVddwOTh", params=params, headers=headers, data=data)
     # if r.status_code != 200:
     #     log(r.status_code)
     #     log(r.text)
