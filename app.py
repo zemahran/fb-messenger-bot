@@ -27,7 +27,7 @@ def webhook():
     # endpoint for processing incoming messaging events
 
     data = request.get_json()
-    log(data)  # you may not want to log every incoming message in production, but it's good for testing
+    #log(data)  # you may not want to log every incoming message in production, but it's good for testing
 
     if data["object"] == "page":
 
@@ -56,7 +56,7 @@ def webhook():
 
 def send_message(recipient_id):
 
-    log("sending a reply to {recipient}".format(recipient=recipient_id))
+    #log("sending a reply to {recipient}".format(recipient=recipient_id))
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
