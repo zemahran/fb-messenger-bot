@@ -78,47 +78,47 @@ def send_message(recipient_id):
               {
                 "type": "postback",
                 "title": "What is Moneyfellows?",
-                "payload": "faq1"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "How do I pay?",
-                "payload": "faq2"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "Are there any fees?",
-                "payload": "faq3"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "How do I get the money?",
-                "payload": "faq4"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "Is this legal?",
-                "payload": "faq5"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "What is the credit ladder?",
-                "payload": "faq6"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "Why is Moneyfellows better than the traditional 'Gamaeya'?",
-                "payload": "faq7"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "Where are you located?",
-                "payload": "faq9"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 "type": "postback",
                 "title": "How can I contact you for more info?",
-                "payload": "faq10"
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               }
             ]
           }]
