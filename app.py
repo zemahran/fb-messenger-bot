@@ -66,33 +66,62 @@ def send_message(recipient_id):
     }
 
     response = {
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Welcome!",
-              "image_url":"https://petersfancybrownhats.com/company_image.png",
-              "subtitle":"We have the right hat for everyone.",
-              "default_action": {
-                "type": "web_url",
-                "url": "https://petersfancybrownhats.com/view?item=103",
-                "webview_height_ratio": "tall",
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Welcome to Moneyfellows!",
+            "subtitle": "How can we help you?",
+            "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "What is Moneyfellows?",
+                "payload": "faq1",
               },
-              "buttons":[
-                {
-                  "type":"web_url",
-                  "url":"https://petersfancybrownhats.com",
-                  "title":"View Website"
-                },{
-                  "type":"postback",
-                  "title":"Start Chatting",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                }              
-              ]      
-            }
-          ]
+              {
+                "type": "postback",
+                "title": "How do I pay?",
+                "payload": "faq2",
+              },
+              {
+                "type": "postback",
+                "title": "Are there any fees?",
+                "payload": "faq3",
+              },
+              {
+                "type": "postback",
+                "title": "How do I get the money?",
+                "payload": "faq4",
+              },
+              {
+                "type": "postback",
+                "title": "Is this legal?",
+                "payload": "faq5",
+              },
+              {
+                "type": "postback",
+                "title": "What is the credit ladder?",
+                "payload": "faq6",
+              },
+              {
+                "type": "postback",
+                "title": "Why is Moneyfellows better than the traditional 'Gamaeya'?",
+                "payload": "faq7",
+              },
+              {
+                "type": "postback",
+                "title": "Where are you located?",
+                "payload": "faq9",
+              },
+              {
+                "type": "postback",
+                "title": "How can I contact you for more info?",
+                "payload": "faq10",
+              }
+            ]
+          }]
         }
       }
     }
@@ -104,10 +133,10 @@ def send_message(recipient_id):
         "message": response
     })
 
-    r = requests.post("https://graph.facebook.com/v6.0/me/messages?access_token=EAADHka8kP6EBAGqb4zjU72AsbxmUZCL7WQR6BxoUlc0ZBYR7LbqLMA28iPUDkVJZBCRefvq5AzBaMZBuDXFK2dQD6X5lPhjmMbyTlnjCd7QY7UHZCy0KKuPciFGktPzo3eZCC5UaIhqz5SFhZCqDBDTIGyeZANTkb6WnIlBgvlYNs5D0bVddwOTh", params=params, headers=headers, data=data)
-    # if r.status_code != 200:
-    #     log(r.status_code)
-    #     log(r.text)
+    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+    if r.status_code != 200:
+        log(r.status_code)
+        log(r.text)
 
 def handle_postback(recipient_id, message_text):
 
