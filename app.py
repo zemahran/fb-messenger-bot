@@ -64,8 +64,30 @@ def send_message(recipient_id):
     headers = {
         "Content-Type": "application/json"
     }
+
     response = {
-        "text": "You sent a message. Now send me an image!"
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Is this the right picture?",
+            "subtitle": "Tap a button to answer.",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Yes!",
+                "payload": "yes",
+              },
+              {
+                "type": "postback",
+                "title": "No!",
+                "payload": "no",
+              }
+            ],
+          }]
+        }
+      }
     }
 
     data = json.dumps({
