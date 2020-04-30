@@ -89,36 +89,6 @@ def send_message(recipient_id):
                 "type": "postback",
                 "title": "Are there any fees?",
                 "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "How do I get the money?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Is this legal?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "What is the credit ladder?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Why is Moneyfellows better than the traditional 'Gamaeya'?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "Where are you located?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
-              },
-              {
-                "type": "postback",
-                "title": "How can I contact you for more info?",
-                "payload": "DEVELOPER_DEFINED_PAYLOAD"
               }
             ]
           }]
