@@ -71,8 +71,6 @@ def send_message(recipient_id):
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Is this the right picture?",
-            "subtitle": "Tap a button to answer.",
             "buttons": [
               {
                 "type": "postback",
