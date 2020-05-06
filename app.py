@@ -67,6 +67,7 @@ def send_message(recipient_id):
 
     response = {
       "attachment": {
+<<<<<<< HEAD
       "type": "template",
       "payload": {
         "template_type": "list",
@@ -130,6 +131,36 @@ def send_message(recipient_id):
       }
     }
     }
+=======
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Welcome to Moneyfellows!",
+            "subtitle": "How can we help you?",
+            "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "What is Moneyfellows?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              },
+              {
+                "type": "postback",
+                "title": "How do I pay?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              },
+              {
+                "type": "postback",
+                "title": "Are there any fees?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              }
+            ]
+          }]
+        }
+      }
+    }
+>>>>>>> 554d54a724c0022c87feb3bc66101fb972c52cb2
 
     data = json.dumps({
         "recipient": {
