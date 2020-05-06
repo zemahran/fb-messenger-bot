@@ -18,7 +18,7 @@ def verify():
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
-    return "Hello world", 200
+    return "Hello worlddd!", 200
 
 
 @app.route('/', methods=['POST'])
@@ -40,7 +40,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, "roger that!")
+                    send_message(sender_id)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
@@ -54,9 +54,9 @@ def webhook():
     return "ok", 200
 
 
-def send_message(recipient_id, message_text):
+def send_message(recipient_id):
 
-    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
+    log("sending a reply to {recipient}".format(recipient=recipient_id))
 
     params = {
         "access_token": os.environ["PAGE_ACCESS_TOKEN"]
@@ -64,18 +64,53 @@ def send_message(recipient_id, message_text):
     headers = {
         "Content-Type": "application/json"
     }
+
+    response = {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Welcome to Moneyfellows!",
+            "subtitle": "How can we help you?",
+            "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "What is Moneyfellows?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              },
+              {
+                "type": "postback",
+                "title": "How do I pay?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              },
+              {
+                "type": "postback",
+                "title": "Are there any fees?",
+                "payload": "DEVELOPER_DEFINED_PAYLOAD"
+              }
+            ]
+          }]
+        }
+      }
+    }
+
     data = json.dumps({
         "recipient": {
             "id": recipient_id
         },
-        "message": {
-            "text": message_text
-        }
+        "message": response
     })
-    r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
+
+    r = requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=EAADHka8kP6EBAGqb4zjU72AsbxmUZCL7WQR6BxoUlc0ZBYR7LbqLMA28iPUDkVJZBCRefvq5AzBaMZBuDXFK2dQD6X5lPhjmMbyTlnjCd7QY7UHZCy0KKuPciFGktPzo3eZCC5UaIhqz5SFhZCqDBDTIGyeZANTkb6WnIlBgvlYNs5D0bVddwOTh", params=params, headers=headers, data=data)
     if r.status_code != 200:
         log(r.status_code)
-        log(r.text)
+        #log(r.text)
+
+def handle_postback(recipient_id, message_text):
+
+    log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
 
 def log(msg, *args, **kwargs):  # simple wrapper for logging to stdout on heroku
