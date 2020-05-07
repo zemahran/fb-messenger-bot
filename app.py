@@ -74,7 +74,7 @@ def send_message(recipient_id):
            {
             "title":"Welcome to Moneyfellows Online Assistant!",
             "image_url": "https://moneyfellows.com/img/web_logo_large.png",
-            #"subtitle":"How can we help you?",
+            "subtitle":"How can we help you?",
             "default_action": {
               "type": "web_url",
               "url": "https://moneyfellows.com/",
@@ -89,7 +89,7 @@ def send_message(recipient_id):
             ]
           },
           {
-           #"title":"Welcome!",
+           "title":"Welcome!",
            "image_url": "https://moneyfellows.com/img/web_logo_large.png",
            "default_action": {
              "type": "web_url",
@@ -105,12 +105,13 @@ def send_message(recipient_id):
            ]
          },
          {
-          #"title":"Welcome!",
+          "title":"Are there any fees?",
           "image_url": "https://moneyfellows.com/img/web_logo_large.png",
           "default_action": {
-            "type": "web_url",
-            "url": "https://moneyfellows.com/",
+            "type": "postback",
+            #"url": "https://moneyfellows.com/",
             "webview_height_ratio": "tall",
+            "payload": "DEVELOPER_DEFINED_PAYLOAD"
           },
           "buttons":[
             {
@@ -120,7 +121,102 @@ def send_message(recipient_id):
             }
           ]
         }
-
+        # {
+        #  "title":"Welcome!",
+        #  "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+        #  "default_action": {
+        #    "type": "web_url",
+        #    "url": "https://moneyfellows.com/",
+        #    "webview_height_ratio": "tall",
+        #  },
+        #  "buttons":[
+        #    {
+        #      "type": "postback",
+        #      "title": "How do I get the money?",
+        #      "payload": "DEVELOPER_DEFINED_PAYLOAD"
+        #    }
+        #  ]
+        # },
+        # {
+        #  "title":"Welcome!",
+        #  "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+        #  "default_action": {
+        #    "type": "web_url",
+        #    "url": "https://moneyfellows.com/",
+        #    "webview_height_ratio": "tall",
+        #  },
+        #  "buttons":[
+        #    {
+        #      "type": "postback",
+        #      "title": "Is this legal?",
+        #      "payload": "DEVELOPER_DEFINED_PAYLOAD"
+        #    }
+        #  ]
+        # },
+        # {
+        #  "title":"Welcome!",
+        #  "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+        #  "default_action": {
+        #    "type": "web_url",
+        #    "url": "https://moneyfellows.com/",
+        #    "webview_height_ratio": "tall",
+        #  },
+        #  "buttons":[
+        #    {
+        #      "type": "postback",
+        #      "title": "What is the credit ladder?",
+        #      "payload": "DEVELOPER_DEFINED_PAYLOAD"
+        #    }
+        #  ]
+        # },
+        # {
+        #  "title":"Welcome!",
+        #  "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+        #  "default_action": {
+        #    "type": "web_url",
+        #    "url": "https://moneyfellows.com/",
+        #    "webview_height_ratio": "tall",
+        #  },
+        #  "buttons":[
+        #    {
+        #      "type": "postback",
+        #      "title": "Why is Moneyfellows better than the traditional 'Gamaeya'?",
+        #      "payload": "DEVELOPER_DEFINED_PAYLOAD"
+        #    }
+        #  ]
+        # },
+        # {
+        #  "title":"Welcome!",
+        #  "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+        #  "default_action": {
+        #    "type": "web_url",
+        #    "url": "https://moneyfellows.com/",
+        #    "webview_height_ratio": "tall",
+        #  },
+        #  "buttons":[
+        #    {
+        #      "type": "postback",
+        #      "title": "Where are you located?",
+        #      "payload": "DEVELOPER_DEFINED_PAYLOAD"
+        #    }
+        #  ]
+        # },
+        # {
+        #  "title":"Welcome!",
+        #  "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+        #  "default_action": {
+        #    "type": "web_url",
+        #    "url": "https://moneyfellows.com/",
+        #    "webview_height_ratio": "tall",
+        #  },
+        #  "buttons":[
+        #    {
+        #      "type": "postback",
+        #      "title": "How can I contact you for more info?",
+        #      "payload": "DEVELOPER_DEFINED_PAYLOAD"
+        #    }
+        #  ]
+        # }
         ]
       }
     }
