@@ -131,7 +131,7 @@ def send_message(recipient_id):
          "buttons":[
            {
              "type": "postback",
-             "title": "How do I get the money?"
+             "title": "How do I get the money?",
              "payload": "DEVELOPER_DEFINED_PAYLOAD"
            }
          ]
