@@ -81,7 +81,7 @@ def send_message(recipient_id):
                 "title": "View",
                 "type": "web_url",
                 "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                "messenger_extensions": true,
+                "messenger_extensions": "true",
                 "webview_height_ratio": "tall",
                 "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
               }
@@ -93,7 +93,7 @@ def send_message(recipient_id):
             "default_action": {
               "type": "web_url",
               "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
-              "messenger_extensions": false,
+              "messenger_extensions": "false",
               "webview_height_ratio": "tall"
             }
           },
@@ -104,7 +104,7 @@ def send_message(recipient_id):
             "default_action": {
               "type": "web_url",
               "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-              "messenger_extensions": true,
+              "messenger_extensions": "true",
               "webview_height_ratio": "tall",
               "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
             },
@@ -113,7 +113,7 @@ def send_message(recipient_id):
                 "title": "Shop Now",
                 "type": "web_url",
                 "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-                "messenger_extensions": true,
+                "messenger_extensions": "true",
                 "webview_height_ratio": "tall",
                 "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
               }
