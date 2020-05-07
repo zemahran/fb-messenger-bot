@@ -138,7 +138,7 @@ def send_message(recipient_id):
         },
         {
          "title":"Welcome!",
-         "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+         #"image_url": "https://moneyfellows.com/img/web_logo_large.png",
          "default_action": {
            "type": "web_url",
            "url": "https://moneyfellows.com/",
@@ -169,8 +169,7 @@ def send_message(recipient_id):
          ]
         },
         {
-         "title":"Welcome!",
-         "image_url": "https://moneyfellows.com/img/web_logo_large.png",
+         #"image_url": "https://moneyfellows.com/img/web_logo_large.png",
          "default_action": {
            "type": "web_url",
            "url": "https://moneyfellows.com/",
@@ -185,13 +184,7 @@ def send_message(recipient_id):
          ]
         },
         {
-         "title":"Welcome!",
          "image_url": "https://moneyfellows.com/img/web_logo_large.png",
-         "default_action": {
-           "type": "web_url",
-           "url": "https://moneyfellows.com/",
-           "webview_height_ratio": "tall",
-         },
          "buttons":[
            {
              "type": "postback",
@@ -201,13 +194,7 @@ def send_message(recipient_id):
          ]
         },
         {
-         "title":"Welcome!",
          "image_url": "https://moneyfellows.com/img/web_logo_large.png",
-         "default_action": {
-           "type": "web_url",
-           "url": "https://moneyfellows.com/",
-           "webview_height_ratio": "tall",
-         },
          "buttons":[
            {
              "type": "postback",
