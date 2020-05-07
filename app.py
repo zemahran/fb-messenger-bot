@@ -74,7 +74,7 @@ def send_message(recipient_id):
            {
             "title":"Welcome to Moneyfellows Online Assistant!",
             "image_url": "https://moneyfellows.com/img/web_logo_large.png",
-            "subtitle":"How can we help you?",
+            #"subtitle":"How can we help you?",
             "default_action": {
               "type": "web_url",
               "url": "https://moneyfellows.com/",
@@ -89,7 +89,7 @@ def send_message(recipient_id):
             ]
           },
           {
-           "title":"Welcome!",
+           #"title":"Welcome!",
            "image_url": "https://moneyfellows.com/img/web_logo_large.png",
            "default_action": {
              "type": "web_url",
@@ -105,7 +105,7 @@ def send_message(recipient_id):
            ]
          },
          {
-          "title":"Welcome!",
+          #"title":"Welcome!",
           "image_url": "https://moneyfellows.com/img/web_logo_large.png",
           "default_action": {
             "type": "web_url",
